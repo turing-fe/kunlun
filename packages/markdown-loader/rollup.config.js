@@ -4,9 +4,9 @@ import nodeResolve from '@rollup/plugin-node-resolve'
 const extensions = ['.ts', '.tsx', '.js', '.jsx']
 
 export default {
-  input: './index.ts',
+  input: './src/index.ts',
   output: {
-    file: './index.js',
+    file: './dist/index.js',
     format: 'cjs'
   },
   plugins: [
