@@ -1,23 +1,12 @@
-'use strict'
-
-Object.defineProperty(exports, '__esModule', { value: true })
-
-var jsxRuntime = require('react/jsx-runtime')
-var marked = require('marked')
-var hljs = require('highlight.js')
-
-function _interopDefaultLegacy(e) {
-  return e && typeof e === 'object' && 'default' in e ? e : { default: e }
-}
-
-var marked__default = /*#__PURE__*/ _interopDefaultLegacy(marked)
-var hljs__default = /*#__PURE__*/ _interopDefaultLegacy(hljs)
+import { jsx } from 'react/jsx-runtime'
+import marked from 'marked'
+import hljs from 'highlight.js'
 
 var Markdown = function (_a) {
   var children = _a.children,
     _b = _a.className,
     className = _b === void 0 ? 'markdown' : _b
-  return jsxRuntime.jsx(
+  return jsx(
     'div',
     { dangerouslySetInnerHTML: { __html: children }, className: className },
     void 0
@@ -67,15 +56,15 @@ function renderer(languages) {
     var lang = getSupportLanguage(langName)
     if (defalutLanguages.includes(lang)) {
       var langModule = require('highlight.js/lib/languages/' + lang)
-      hljs__default['default'].registerLanguage(lang, langModule)
+      hljs.registerLanguage(lang, langModule)
     }
   })
-  var renderer = new marked__default['default'].Renderer()
+  var renderer = new marked.Renderer()
   var codeRenderer = function (code, lang) {
     var langName = getSupportLanguage(lang)
     var hlCode = langName
-      ? hljs__default['default'].highlight(code, { language: langName }).value
-      : hljs__default['default'].highlightAuto(code).value
+      ? hljs.highlight(code, { language: langName }).value
+      : hljs.highlightAuto(code).value
     return (
       '<div class="doc-highlight"><pre><code class="' +
       (langName || '') +
@@ -88,6 +77,5 @@ function renderer(languages) {
   return renderer
 }
 
-exports.Markdown = Markdown
-exports.renderer = renderer
-//# sourceMappingURL=index.js.map
+export { Markdown, renderer }
+//# sourceMappingURL=index.d.ts.map

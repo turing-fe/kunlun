@@ -21,6 +21,8 @@ specifiers:
   react: ^17.0.2
   react-dom: ^17.0.2
   rollup: ^2.45.2
+  rollup-plugin-typescript2: ^0.30.0
+  tslib: ^2.2.0
   webpack: ^5.35.0
   webpack-cli: ^4.6.0
   webpack-dev-server: ^3.11.2
@@ -48,6 +50,8 @@ devDependencies:
   html-webpack-plugin: 5.3.1_webpack@5.35.0
   markdown-loader: registry.nlark.com/markdown-loader/6.0.0
   rollup: 2.45.2
+  rollup-plugin-typescript2: 0.30.0_rollup@2.45.2
+  tslib: 2.2.0
   webpack: registry.nlark.com/webpack/5.35.0_webpack-cli@4.6.0
   webpack-cli: 4.6.0_66846cbaca9dc7de430d1cef305cccfa
   webpack-dev-server: 3.11.2_webpack-cli@4.6.0+webpack@5.35.0
@@ -1093,6 +1097,17 @@ packages:
     dependencies:
       '@types/estree': 0.0.39
       estree-walker: 1.0.1
+      picomatch: 2.2.3
+      rollup: 2.45.2
+    dev: true
+
+  /@rollup/pluginutils/4.1.0_rollup@2.45.2:
+    resolution: {integrity: sha1-Dcxhx4DjkldVT+t/dyB9zsoTyDg=, tarball: '@rollup/pluginutils/download/@rollup/pluginutils-4.1.0.tgz'}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      estree-walker: 2.0.2
       picomatch: 2.2.3
       rollup: 2.45.2
     dev: true
@@ -2509,6 +2524,10 @@ packages:
     resolution: {integrity: sha1-MbxdYSyWtwQQa0d+bdXYqhOMtwA=, tarball: estree-walker/download/estree-walker-1.0.1.tgz}
     dev: true
 
+  /estree-walker/2.0.2:
+    resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: estree-walker/download/estree-walker-2.0.2.tgz}
+    dev: true
+
   /esutils/2.0.3:
     resolution: {integrity: sha1-dNLrTeC42hKTcRkQ1Qd1ubcQ72Q=, tarball: esutils/download/esutils-2.0.3.tgz}
     engines: {node: '>=0.10.0'}
@@ -2773,6 +2792,15 @@ packages:
   /fresh/0.5.2:
     resolution: {integrity: sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=, tarball: fresh/download/fresh-0.5.2.tgz?cache=0&sync_timestamp=1605328831834&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ffresh%2Fdownload%2Ffresh-0.5.2.tgz}
     engines: {node: '>= 0.6'}
+    dev: true
+
+  /fs-extra/8.1.0:
+    resolution: {integrity: sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=, tarball: fs-extra/download/fs-extra-8.1.0.tgz}
+    engines: {node: '>=6 <7 || >=8'}
+    dependencies:
+      graceful-fs: 4.2.6
+      jsonfile: 4.0.0
+      universalify: 0.1.2
     dev: true
 
   /fs.realpath/1.0.0:
@@ -3580,6 +3608,12 @@ packages:
     hasBin: true
     dependencies:
       minimist: 1.2.5
+    dev: true
+
+  /jsonfile/4.0.0:
+    resolution: {integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=, tarball: jsonfile/download/jsonfile-4.0.0.tgz}
+    optionalDependencies:
+      graceful-fs: 4.2.6
     dev: true
 
   /keyv/3.1.0:
@@ -4706,6 +4740,20 @@ packages:
       glob: 7.1.6
     dev: true
 
+  /rollup-plugin-typescript2/0.30.0_rollup@2.45.2:
+    resolution: {integrity: sha1-HMmawjCb9LnQo+vbwgAq7NVgg9M=, tarball: rollup-plugin-typescript2/download/rollup-plugin-typescript2-0.30.0.tgz}
+    peerDependencies:
+      rollup: '>=1.26.3'
+      typescript: '>=2.4.0'
+    dependencies:
+      '@rollup/pluginutils': 4.1.0_rollup@2.45.2
+      find-cache-dir: 3.3.1
+      fs-extra: 8.1.0
+      resolve: 1.20.0
+      rollup: 2.45.2
+      tslib: 2.1.0
+    dev: true
+
   /rollup/2.45.2:
     resolution: {integrity: sha1-j7hZF8nzVgVyDpIyjzzL+6b3i0g=, tarball: rollup/download/rollup-2.45.2.tgz}
     engines: {node: '>=10.0.0'}
@@ -5275,6 +5323,10 @@ packages:
     engines: {node: '>=0.6'}
     dev: true
 
+  /tslib/2.1.0:
+    resolution: {integrity: sha1-2mCGDxwuyqVwOrfTm8Bba/mIuXo=, tarball: tslib/download/tslib-2.1.0.tgz}
+    dev: true
+
   /tslib/2.2.0:
     resolution: {integrity: sha1-+yxHWXfjXiQTEe3iaTzuHsZpj1w=, tarball: tslib/download/tslib-2.2.0.tgz}
     dev: true
@@ -5351,6 +5403,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       crypto-random-string: 2.0.0
+    dev: true
+
+  /universalify/0.1.2:
+    resolution: {integrity: sha1-tkb2m+OULavOzJ1mOcgNwQXvqmY=, tarball: universalify/download/universalify-0.1.2.tgz}
+    engines: {node: '>= 4.0.0'}
     dev: true
 
   /unpipe/1.0.0:

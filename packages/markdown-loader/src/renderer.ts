@@ -1,8 +1,8 @@
 import marked from 'marked'
 // @ts-ignore
-import hljs from 'highlight.js/lib/core'
+import hljs from 'highlight.js' // 'highlight.js/lib/core'
 
-const defalutLanguages = [
+const defalutLanguages: string[] = [
   'javascript',
   'bash',
   'xml',
