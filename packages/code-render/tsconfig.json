@@ -1,0 +1,18 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["src", "types"],
+  "compilerOptions": {
+    "target": "ESNext",
+    // "module": "ESNext",
+    "declaration": false,
+    "sourceMap": false,
+    "jsx": "react-jsxdev",
+    "baseUrl": "./",
+    "lib": ["ESNext", "DOM"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["node"],
+    "typeRoots": ["node_modules/types", "types"]
+  }
+}

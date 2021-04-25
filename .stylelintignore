@@ -1,3 +1,4 @@
-packages/markdown-loader/
-packages/server/
-packages/vite-build/
+packages/**/dist
+packages/**/lib
+packages/**/output
+packages/**/snapshots

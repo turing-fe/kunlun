@@ -1,3 +1,11 @@
 /node_modules/
 /lib/
 /dist/
+**/*.dist.js
+**/*.dist.html
+**/*.hot-update.js
+**/*.hot-update.json
+**/test/output/
+**/test/snapshots/
+
+packages/**/lib
